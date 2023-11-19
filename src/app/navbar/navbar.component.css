@@ -1,0 +1,251 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  margin: 0 auto;
+}
+
+.contenitore {
+  width: 100%;
+}
+
+.navbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+position: relative;
+z-index: 199;
+margin: 0;
+padding: 0;
+line-height: 60px;
+background-color: #ac3b61;
+}
+
+.logo{
+  min-height: 60px;
+  background-image: url(../../../../img/logo-tipo.png);
+  background-repeat: no-repeat;
+  background-size: 140px;
+  background-position: 30px center;
+  width: 8em;
+  font-size: 25px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.toggle {
+  display: none;
+}
+
+label {
+  display: block;
+  margin: 0.5em 0 0 0;
+  font-weight: normal;
+  font-size: 85%;
+  letter-spacing: -0.02em;
+  line-height: 60px;
+  text-align: left;
+}
+
+.contenitore-link {
+  display: flex;
+  width: 70%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  transition: .5s;
+  width: 20%;
+}
+
+.link:hover{
+  background-color: rgb(240, 174, 88);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+.checkbox:checked ~ .toggle span {
+  background-color: transparent;
+}
+
+.checkbox:checked ~ .toggle span::before {
+  transform: rotate(45deg);
+  border-radius: 19842018px;
+}
+
+.checkbox:checked ~ .toggle span::before{
+  transition-delay: 0s, 0.2s;
+  margin-top: 0;
+}
+
+.checkbox:checked ~ .toggle span::after {
+  transform: rotate(-45deg);
+  border-radius: 19842018px;
+}
+
+.checkbox:checked ~ .toggle span::after {
+  transition-delay: 0s, 0.2s;
+  margin-top: 0;
+}
+
+.text{
+color: #444;
+line-height: 1.3;
+font-size: 17.8px;
+}
+
+@media (max-width: 1200px){
+.toggle {
+    display: block;
+    margin: 0;
+    padding: 0.5em;
+    padding-right: 1em;
+    padding-bottom: 0em;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 700;
+    color: black;
+}
+
+.toggle span {
+  transition-duration: 0s;
+  transition-delay: 0.15s;
+  position: relative;
+  display: inline-flex;
+  top: -0.4rem;
+  width: 1.55rem;
+  height: 0.3rem;
+  margin-right: 0.125em;
+  background-color: black;
+  border-radius: 0rem;
+}
+
+.toggle span::before {
+  right: 0;
+  transition-delay: 0.15s, 0s;
+  transition-duration: 0.15s;
+  transition-property: margin, transform;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 0.3rem;
+  background-color: black;
+  border-radius: 0rem;
+  margin-top: -0.6rem;
+}
+
+.toggle span::after {
+  right: 0;
+  transition-delay: 0.15s, 0s;
+  transition-duration: 0.15s;
+  transition-property: margin, transform;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 0.3rem;
+  background-color: black;
+  border-radius: 0rem;
+  margin-top: 0.6rem;
+}
+
+.contenitore-link {
+  position: absolute;
+  top: 5rem;
+  right: -25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  font-size: 125%;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.contenitore-link::after {
+  transition: opacity 0.15s ease-in-out;
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(255,255,255,0.86);
+}
+
+.link {
+  transition: transform 0.15s ease-in;
+  transform: translate(0, 0);
+  display: inline-block;
+  padding:  0.2em 1em;
+  margin: 0 0 0.25em 0;
+  line-height: 2;
+  text-decoration: none;
+  color: #111;
+  text-decoration: none;
+  
+  line-height: 0.85;
+  margin-bottom: 25px;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: 40%;
+
+
+}
+.checkbox:checked ~ .contenitore-link::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.checkbox:checked ~ .contenitore-link .link {
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translate(-28.5rem, 0);
+  border-bottom: 2px solid #111;
+}
+
+.link:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.link:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.link:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.link:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.link:nth-child(5) {
+  transition-delay: 0.25s;
+}
+
+.link:hover{
+  font-size: 1.2em;
+  cursor: pointer;
+}
+}
+

@@ -1,0 +1,18 @@
+body{
+    background-color: #222825;
+    overflow-x: hidden;
+}
+
+html.popup-active{
+    overflow: hidden;
+}
+
+html.attivo{
+    overflow: hidden;
+}
+
+html.popuptrovafilm-active{
+    overflow: hidden;
+}
+
+

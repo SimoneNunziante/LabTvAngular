@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <span class="contenitore">
+    <nav class="navbar" aria-label="main">
+      <a href="javascript:void(0)" class="logo">
+        <span></span>
+      </a>
+
+      <input type="checkbox" id="hamburger" class="checkbox" (change)="toggleCheckbox()" [checked]="isChecked">
+      <label class="toggle" for="hamburger">
+        <span [class.active]="isChecked"></span>
+        Menu
+      </label>
+      <div class="contenitore-link">
+        <a class="link" href="./home">Home</a>
+        <a class="link" (click)="login()">Login</a>
+        <a class="link" [routerLink]="'/registrati'">Registrati</a>
+        <a class="link" [routerLink]="'/social'">Social</a>
+        <a class="link" [routerLink]="'/contatti'">Contatti</a>
+      </div>
+    </nav>
+  </span>
+</div>
+
+
+  
+
+

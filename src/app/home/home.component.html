@@ -1,0 +1,307 @@
+<div class="container-fluid">
+
+    <!--INIZIO HEROBANNER-->
+    <ngb-carousel [interval]="5000" [showNavigationArrows]="false" [showNavigationIndicators]="false" class="hero-banner">
+        <ng-template ngbSlide *ngFor="let item of filmMostPopular.slice(0, 10)">
+        <div class="picsum-img-wrapper" (click)="getMovieById(item.id)">
+            <img src="https://image.tmdb.org/t/p/w1280{{item.backdrop_path}}">
+        </div>
+        <div class="details container">
+            <h2>{{item.title}}</h2>
+            <p>{{item.overview}}</p>
+        </div>
+        </ng-template>
+    </ngb-carousel>
+    <!--FINE HEROBANNER-->
+</div>
+<div class="container">
+    <!--INIZIO SEZIONE BARRA DI RICERCA-->
+    <div class="input-group">
+        <form (ngSubmit)="trovaFilm()">
+            <input type="search" class="form-control rounded" [(ngModel)]="filmCercato" placeholder="Cerca il film" aria-label="Search" aria-describedby="search-addon" autocomplete="off" name="filmCercato"/>
+            <button type="submit" class="btn btn-outline-primary">Cerca</button>
+        </form>
+    </div>
+    <!--FINE SEZIONE BARRA DI RICERCA-->
+
+    <!--INIZIO PRIMO CAROSELLO-->
+    <div class="consigliati-contenitore">
+        <div class="contenitore-titolo">
+            <h2>Film più popolari</h2>
+        </div>
+
+        <div class="contenitore-principale">
+            <button role="button" id="freccia-sinistra" class="freccia-sinistra" ><</button>
+
+            <div class="contenitore-carosello">
+                <div class="carosello">
+                    <div class="film" (click)="getMovieById(item.id)" *ngFor="let item of filmMostPopular">
+                        <a href="javascript:void(0)"><img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}"></a>
+                        <div class="film-info">
+                            <h3>{{item.title}}</h3>
+                            <p>Film ID: {{item.id}}</p>
+                            <p>Data di uscita: {{item.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button role="button" id="freccia-destra" class="freccia-destra"><i class="fasfa-angle-right" >></i></button>
+        </div> 
+    </div>
+    <!--FINE PRIMO CAROSELLO-->
+
+    <!--INIZIO SECONDO CAROSELLO-->
+    <div class="contenitore-topRated">
+        <div class="contenitore-titolo-topRated">
+            <h2>Apprezzati dalla critica</h2>
+        </div>
+
+        <div class="contenitore-principale-topRated">
+            <button role="button" id="freccia-sinistra-topRated" class="freccia-sinistra"><</button>
+
+            <div class="contenitore-carosello-topRated">
+                <div class="carosello-topRated">
+                    <div class="film-topRated" (click)="getMovieById(item.id)" *ngFor="let item of filmTopRated">
+                        <a href="javascript:void(0)"><img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}"></a>
+                        <div class="film-topRated-info">
+                            <h3>{{item.title}}</h3>
+                            <p>Film ID: {{item.id}}</p>
+                            <p>Data di uscita: {{item.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button role="button" id="freccia-destra-topRated" class="freccia-destra"><i class="fasfa-angle-right">></i></button>
+        </div>
+    </div>
+    <!--FINE SECONDO CAROSELLO-->
+
+    <!--INIZIO TERZO CAROSELLO-->
+    <div class="contenitore-horror">
+        <div class="contenitore-titolo-horror">
+            <h2>Film Horror</h2>
+        </div>
+
+        <div class="contenitore-principale-horror">
+            <button role="button" id="freccia-sinistra-horror" class="freccia-sinistra"><</button>
+
+            <div class="contenitore-carosello-horror">
+                <div class="carosello-horror">
+                    <div class="film-horror" (click)="getMovieById(item.id)" *ngFor="let item of filmHorror">
+                        <a href="javascript:void(0)"><img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}"></a>
+                        <div class="film-horror-info">
+                            <h3>{{item.title}}</h3>
+                            <p>Film ID: {{item.id}}</p>
+                            <p>Data di uscita: {{item.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button role="button" id="freccia-destra-horror" class="freccia-destra"><i class="fasfa-angle-right">></i></button>
+        </div>
+    </div>
+    <!--FINE TERZO CAROSELLO-->
+
+    <!--INIZIO QUARTO CAROSELLO-->
+    <div class="contenitore-commedia">
+        <div class="contenitore-titolo-commedia">
+            <h2>Commedie</h2>
+        </div>
+
+        <div class="contenitore-principale-commedia">
+            <button role="button" id="freccia-sinistra-commedia" class="freccia-sinistra"><</button>
+
+            <div class="contenitore-carosello-commedia">
+                <div class="carosello-commedia">
+                    <div class="film-commedia" (click)="getMovieById(item.id)" *ngFor="let item of filmCommedia">
+                        <a href="javascript:void(0)"><img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}"></a>
+                        <div class="film-commedia-info">
+                            <h3>{{item.title}}</h3>
+                            <p>Film ID: {{item.id}}</p>
+                            <p>Data di uscita: {{item.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button role="button" id="freccia-destra-commedia" class="freccia-destra"><i class="fasfa-angle-right">></i></button>
+        </div>
+    </div>
+    <!--FINE QUARTO CAROSELLO-->
+
+    <!--INIZIO QUINTO CAROSELLO-->
+    <div class="contenitore-animazione">
+        <div class="contenitore-titolo-animazione">
+            <h2>Film di animazione</h2>
+        </div>
+
+        <div class="contenitore-principale-animazione">
+            <button role="button" id="freccia-sinistra-animazione" class="freccia-sinistra"><</button>
+
+            <div class="contenitore-carosello-animazione">
+                <div class="carosello-animazione">
+                    <div class="film-animazione" (click)="getMovieById(item.id)" *ngFor="let item of filmAnimazione">
+                        <a href="javascript:void(0)"><img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}"></a>
+                        <div class="film-animazione-info">
+                            <h3>{{item.title}}</h3>
+                            <p>Film ID: {{item.id}}</p>
+                            <p>Data di uscita: {{item.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button role="button" id="freccia-destra-animazione" class="freccia-destra"><i class="fasfa-angle-right">></i></button>
+        </div>
+    </div>
+    <!--FINE QUINTO CAROSELLO-->
+
+    <!--INIZIO POPUP DETTAGLI FILM-->
+    <div class="popup-container popup-active" *ngIf="showPopup"> 
+        <div class="popup">
+            <h2>{{movieById.title}}</h2>
+            <ng-container *ngIf="embedUrl; else defaultPoster"> <!--In caso non venga trovato il link per il trailer viene inserita l'immagine di default.-->
+                <iframe max-width="300" max-height="150" [src]="embedUrl"></iframe>
+            </ng-container>
+            <ng-template #defaultPoster>
+                <img class="default" [src]="defaultImageUrl" alt="Default Poster" style="width: 80%; margin-top: 30px; border: 6px solid #ac3b61; padding: 30px; border-radius: 0.375em;">
+            </ng-template>
+            <div id="sinossi">
+                <p>ID: {{movieById.id}}</p>
+                <p>{{movieById.overview}}</p>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Regista:</th>
+                        <th scope="col">Generi:</th>
+                        <th scope="col">Film simili:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="director" *ngFor="let item of filmDirector">
+                                    <ng-container *ngIf="item.job === 'Director'">
+                                        <span>{{item.name}}</span>
+                                    </ng-container>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="generi" *ngFor="let item of movieById.genres.slice(0,3)">
+                                    <span>{{item.name}};</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="similarMovies" *ngFor="let item of similarMovies.slice(0,3)">
+                                    <span>{{item.title}};</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container-acquista-cast">
+                <button id="showCast" (click)="showCast()">Visualizza il cast</button>
+
+                <button id="acquista">
+                    <a (click)="acquista(movieById)">Acquista</a>
+                </button>
+            </div>
+
+            <div id="contenitore-bottone-chiudi">
+                <section (click)="closePopup()">
+                    <ul id="chiudi">
+                        <li></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!--INIZIO POPUP CAST-->
+            <div id="popup-cast" *ngIf="isCastVisible">
+                <h2 id="cast">Cast-{{movieById.title}}:</h2>
+                <div class="flexcontainer-cast">
+                    <div class="castmembers" *ngFor="let item of filmCast.slice(0,5)">
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{item.profile_path}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.name}}</h5>
+                                <p class="card-text">{{item.character}}</p>
+                            </div>
+                        </div>   
+                    </div>
+
+                </div>
+
+                <button (click)="hideCast()">Indietro</button>
+            </div>
+            <!--FINE POPUP CAST-->
+
+        </div>
+    </div>
+    <!--FINE POPUP DETTAGLI FILM-->
+
+    <!--INIZIO POPUP RICERCA FILM-->
+    <div class="popupTrovaFilm" *ngIf="popupTrovaFilm">
+        <h2>Risultati per "{{filmCercato}}"</h2>
+        <div class="flexcontainer-trovafilm">
+            <div class="filmTrovati" *ngFor="let item of risFilmCercato.slice(0,5)">
+                <div class="card" (click)="getMovieById(item.id)">
+                    <ng-container *ngIf="item.poster_path; else defaultPoster"><!--In caso non venga trovata l'immagine utilizza quella di default-->
+                        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}">
+                    </ng-container>
+                    <ng-template #defaultPoster>
+                        <img class="default" [src]="defaultImageUrl" alt="Default Poster">
+                    </ng-template>
+                    <div class="card-body">
+                        <h5 class="card-title">{{truncateTitle(item.title)}}</h5>
+                        <p class="card-text">{{item.release_date}}</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <button (click)="hideTrovaFilm()">Indietro</button>
+    </div>
+    <!--FINE POPUP RICERCA FILM-->
+
+    <!--INIZIO SCROLL INFINITO-->
+    <h3 id="button-message">Se non hai ancora trovato quello che cerchi, continua a cliccare il bottone sottostante</h3>
+    <div id="arrow"></div>
+    
+    <button (click)="caricaAltro()" id="caricaAltro">Visualizza altri Film</button>
+
+
+    <div class="contenitore-scroll" [ngClass]="d_none">
+        <div class="contenitore-titolo-scroll">
+            <h2>Altri film per te</h2>
+        </div>
+
+        <div class="contenitore-principale-scroll">
+            <button role="button" id="freccia-sinistra-scroll" class="freccia-sinistra"><</button>
+
+            <div class="contenitore-carosello-scroll">
+                <div class="carosello-scroll">
+                    <div class="film-scroll" (click)="getMovieById(item.id)" *ngFor="let item of scroll">
+                        <a href="javascript:void(0)"><img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="{{item.title}}"></a>
+                        <div class="film-scroll-info">
+                            <h3>{{item.title}}</h3>
+                            <p>Film ID: {{item.id}}</p>
+                            <p>Data di uscita: {{item.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button role="button" id="freccia-destra-scroll" class="freccia-destra"><i class="fasfa-angle-right">></i></button>
+        </div>
+    </div>
+</div>
+
+    

@@ -1,0 +1,41 @@
+<div class="container">
+    <div id="modulo">
+        <h2>Contattaci</h2>
+        <form (submit)="contattaci()">
+            <ul>
+                <li>
+                    <label for="inputName"></label>
+                    <input type="text" name="nome" [(ngModel)]="nome" class="form-control" id="nome" placeholder="Nome" autocomplete="off" [ngStyle]="{'border': nome.trim()==='' ? '2px solid red':'1px solid #ccc'}">     
+                    <span></span>           
+                </li>   
+                <li>
+                    <input type="text" name="cognome" [(ngModel)]="cognome" id="cognome" placeholder="Cognome" autocomplete="off" [ngStyle]="{'border': cognome.trim()==='' ? '2px solid red':'1px solid #ccc'}">
+                    <span></span>
+                </li>
+                <li>
+                    <input type="text" name="email" id="email" [(ngModel)]="email" placeholder="Email" autocomplete="off" [ngStyle]="{'border': email.trim()==='' ? '2px solid red':'1px solid #ccc'}">     
+                    <span></span>           
+                </li> 
+                <li>
+                    <input type="tel" name="telefono" id="telefono" [(ngModel)]="telefono" placeholder="Telefono" autocomplete="off" [ngStyle]="{'border': telefono.trim()==='' ? '2px solid red':'1px solid #ccc'}">     
+                    <span></span>           
+                </li> 
+                <li>
+                    <label for="messaggio">Messaggio:</label>
+                    <textarea id="messaggio" name="messaggio" [(ngModel)]="messaggio" [ngStyle]="{'border': messaggio.trim()==='' ? '2px solid red':'1px solid #ccc'}"></textarea>
+                    <span></span>
+                </li> 
+                <li>
+                    <input type="checkbox" name="privacy" id="privacy" [(ngModel)]="checkbox">
+                    <label for="privacy" id="privacylabel">Accetto le condizioni di utilizzo</label>
+                    <span></span>
+                </li>
+                <li>
+                    <button type="submit">Contattaci</button>
+                </li>
+
+                <div *ngIf="contattiMessage" [innerHtml]="contattiMessage" role="alert" class="mt-4" [ngClass]="contattiMessageClass" style="text-align: center;"></div>
+            </ul>
+        </form>
+    </div>
+</div>

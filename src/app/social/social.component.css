@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 6% auto;
+    max-width: 45%;
+    border: 6px solid #ac3b61;
+    background-color: rgba(172, 59, 97, 0.4);
+    border-radius: 1.375rem;
+}
+
+#seguici{
+    background-image: url(../../../../img/follow-us.png);
+    background-size: 256px;
+    height: 256px;
+    width: 256px;
+    margin: 25px auto;
+    list-style: none;
+}
+
+#loghi{
+    margin-top: 15%;
+    margin-bottom: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#loghi li{
+    background-image: url(../../../../img/spritesocial.png);
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+#loghi li:hover{
+    background-position: -64px;
+}
+
+#loghi li:nth-child(2){
+    background-position: -128px;
+}
+
+#loghi li:nth-child(2):hover{
+    background-position: -192px;
+}
+
+#loghi li:nth-child(3){
+    background-position: -256px;
+}
+
+#loghi li:nth-child(3):hover{
+    background-position: -320px;
+}
+
+#loghi li:nth-child(4){
+    background-position: -384px;
+}
+
+#loghi li:nth-child(4):hover{
+    background-position: -448px;
+}

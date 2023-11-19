@@ -1,0 +1,1152 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*INIZIO HEROBANNER*/
+.picsum-img-wrapper{
+    width: 100vw;
+    max-height:85vh;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.picsum-img-wrapper img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.hero-banner .details{
+    position: absolute;
+    left: 0;
+    min-width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 1;
+    cursor: pointer;
+}
+/*FINE HEROBANNER*/
+
+
+
+
+
+
+
+/*INIZIO BARRA DI RICERCA FILM*/
+.input-group{
+    width: 50%;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.input-group form{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.input-group input{
+    border: 2px solid rgb(172, 59, 97);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.input-group button{
+    width: 30%;
+    border: 2px solid rgb(172, 59, 97);
+    background-color: rgba(172, 59, 97, 0.4);
+    color: white;
+}
+
+.input-group button:hover{
+    background-color: #ac3b61;
+    border: 4px solid rgba(172, 59, 97, 0.4);
+}
+/*FINE BARRA DI RICERCA FILM*/
+
+
+
+
+
+
+
+/*INIZIO PRIMO CAROSELLO*/
+/*Inizio contenitore titolo*/
+.consigliati-contenitore{
+    margin-top: 25px;
+}
+
+.contenitore-titolo h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+}
+/*Fine contenitore titolo*/
+
+/*Contenitore principale+frecce*/
+.consigliati-contenitore{
+    margin-bottom: 0;
+}
+
+.consigliati-contenitore .contenitore-principale{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.consigliati-contenitore .contenitore-principale .freccia-sinistra,
+.consigliati-contenitore .contenitore-principale .freccia-destra{
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.consigliati-contenitore .contenitore-principale .freccia-sinistra:hover,
+.consigliati-contenitore .contenitore-principale .freccia-destra:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+}
+
+.consigliati-contenitore .contenitore-principale .freccia-sinistra{
+    left: 0;
+}
+
+.consigliati-contenitore .contenitore-principale .freccia-destra{
+    right: 0;
+}
+/*Fine contenitore principale+frecce*/
+
+/*Carosello*/
+.consigliati-contenitore .contenitore-carosello{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.consigliati-contenitore .contenitore-carosello .carosello{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 550px;
+    position: relative;
+}
+
+.consigliati-contenitore .contenitore-carosello .carosello .film{
+    min-width: 23%;
+    margin: 0 1%;
+    max-height: 550px;
+    transition: .3s ;
+}
+
+.consigliati-contenitore .contenitore-carosello .carosello .film:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.consigliati-contenitore .contenitore-carosello .carosello .film img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 12px;
+}
+
+.film-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.film:hover .film-info {
+    opacity: 1;
+}
+
+.film-info h3{
+    font-size: 1.3em;
+}
+
+.film-info p{
+    font-size: 1em;
+}
+/*Fine Carosello*/
+/*FINE PRIMO CAROSELLO*/
+
+
+
+
+
+
+
+/*INIZIO SECONDO CAROSELLO*/
+/*Inizio contenitore titolo*/
+.contenitore-titolo-topRated{
+    margin-top: 25px;
+}
+
+.contenitore-titolo-topRated h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+}
+/*Fine contenitore titolo*/
+
+/*Contenitore principale+frecce*/
+.contenitore-principale-topRated{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenitore-principale-topRated #freccia-sinistra-topRated,
+.contenitore-principale-topRated #freccia-destra-topRated{
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.contenitore-principale-topRated #freccia-sinistra-topRated:hover,
+.contenitore-principale-topRated #freccia-destra-topRated:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+.contenitore-principale-topRated #freccia-sinistra-topRated{
+    left: 0;
+}
+
+.contenitore-principale-topRated #freccia-destra-topRated{
+    right: 0;
+}
+/*Fine contenitore principale+frecce*/
+
+/*Carosello*/
+.contenitore-carosello-topRated{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.contenitore-carosello-topRated .carosello-topRated{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 550px;
+    position: relative;
+}
+
+.contenitore-carosello-topRated .carosello-topRated .film-topRated{
+    min-width: 23%;
+    margin: 0 1%;
+    max-height: 550px;
+    transition: .3s ;
+}
+
+.contenitore-carosello-topRated .carosello-topRated .film-topRated:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.contenitore-carosello-topRated .carosello-topRated .film-topRated img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 12px;
+}
+
+.film-topRated-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.film-topRated:hover .film-topRated-info {
+    opacity: 1;
+}
+
+.film-topRated-info h3{
+    font-size: 1.3em;
+}
+
+.film-topRated-info p{
+    font-size: 1em;
+}
+/*Fine Carosello*/
+/*FINE SECONDO CAROSELLO*/
+
+
+
+
+
+
+
+/*INIZIO TERZO CAROSELLO*/
+/*Inizio contenitore titolo*/
+.contenitore-titolo-horror{
+    margin-top: 25px;
+}
+
+.contenitore-titolo-horror h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+}
+/*Fine contenitore titolo*/
+
+/*Contenitore principale+frecce*/
+.contenitore-principale-horror{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenitore-principale-horror #freccia-sinistra-horror,
+.contenitore-principale-horror #freccia-destra-horror{
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.contenitore-principale-horror #freccia-sinistra-horror:hover,
+.contenitore-principale-horror #freccia-destra-horror:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+.contenitore-principale-horror #freccia-sinistra-horror{
+    left: 0;
+}
+
+.contenitore-principale-horror #freccia-destra-horror{
+    right: 0;
+}
+/*Fine contenitore principale+frecce*/
+
+/*Carosello*/
+.contenitore-carosello-horror{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.contenitore-carosello-horror .carosello-horror{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 550px;
+    position: relative;
+}
+
+.contenitore-carosello-horror .carosello-horror .film-horror{
+    min-width: 23%;
+    margin: 0 1%;
+    max-height: 550px;
+    transition: .3s ;
+}
+
+.contenitore-carosello-horror .carosello-horror .film-horror:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.contenitore-carosello-horror .carosello-horror .film-horror img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 12px;
+}
+
+.film-horror-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.film-horror:hover .film-horror-info {
+    opacity: 1;
+}
+
+.film-horror-info h3{
+    font-size: 1.3em;
+}
+
+.film-horror-info p{
+    font-size: 1em;
+}
+/*Fine Carosello*/
+/*FINE TERZO CAROSELLO*/
+
+
+
+
+
+
+
+/*INIZIO QUARTO CAROSELLO*/
+/*Inizio contenitore titolo*/
+.contenitore-titolo-commedia{
+    margin-top: 25px;
+}
+
+.contenitore-titolo-commedia h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+}
+/*Fine contenitore titolo*/
+
+/*Contenitore principale+frecce*/
+.contenitore-principale-commedia{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenitore-principale-commedia #freccia-sinistra-commedia,
+.contenitore-principale-commedia #freccia-destra-commedia{
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.contenitore-principale-commedia #freccia-sinistra-commedia:hover,
+.contenitore-principale-commedia #freccia-destra-commedia:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+.contenitore-principale-commedia #freccia-sinistra-commedia{
+    left: 0;
+}
+
+.contenitore-principale-commedia #freccia-destra-commedia{
+    right: 0;
+}
+/*Fine contenitore principale+frecce*/
+
+/*Carosello*/
+.contenitore-carosello-commedia{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.contenitore-carosello-commedia .carosello-commedia{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 550px;
+    position: relative;
+}
+
+.contenitore-carosello-commedia .carosello-commedia .film-commedia{
+    min-width: 23%;
+    margin: 0 1%;
+    max-height: 550px;
+    transition: .3s ;
+}
+
+.contenitore-carosello-commedia .carosello-commedia .film-commedia:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.contenitore-carosello-commedia .carosello-commedia .film-commedia img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 12px;
+}
+
+.film-commedia-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.film-commedia:hover .film-commedia-info {
+    opacity: 1;
+}
+
+.film-commedia-info h3{
+    font-size: 1.3em;
+}
+
+.film-commedia-info p{
+    font-size: 1em;
+}
+/*Fine Carosello*/
+/*FINE QUARTO CAROSELLO*/
+
+
+
+
+
+
+
+/*INIZIO QUINTO CAROSELLO*/
+/*Inizio contenitore titolo*/
+.contenitore-titolo-animazione{
+    margin-top: 25px;
+}
+
+.contenitore-titolo-animazione h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+}
+/*Fine contenitore titolo*/
+
+/*Contenitore principale+frecce*/
+.contenitore-principale-animazione{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenitore-principale-animazione #freccia-sinistra-animazione,
+.contenitore-principale-animazione #freccia-destra-animazione{
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.contenitore-principale-animazione #freccia-sinistra-animazione:hover,
+.contenitore-principale-animazione #freccia-destra-animazione:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+.contenitore-principale-animazione #freccia-sinistra-animazione{
+    left: 0;
+}
+
+.contenitore-principale-animazione #freccia-destra-animazione{
+    right: 0;
+}
+/*Fine contenitore principale+frecce*/
+
+/*Carosello*/
+.contenitore-carosello-animazione{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.contenitore-carosello-animazione .carosello-animazione{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 550px;
+    position: relative;
+}
+
+.contenitore-carosello-animazione .carosello-animazione .film-animazione{
+    min-width: 23%;
+    margin: 0 1%;
+    max-height: 550px;
+    transition: .3s ;
+}
+
+.contenitore-carosello-animazione .carosello-animazione .film-animazione:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.contenitore-carosello-animazione .carosello-animazione .film-animazione img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 12px;
+}
+
+.film-animazione-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.film-animazione:hover .film-animazione-info {
+    opacity: 1;
+}
+
+.film-animazione-info h3{
+    font-size: 1.3em;
+}
+
+.film-animazione-info p{
+    font-size: 1em;
+}
+/*Fine carosello*/
+/*FINE  QUINTO CAROSELLO*/
+
+
+
+
+
+
+
+/*INIZIO POPUP DETTAGLI FILM*/
+.popup-container{
+    position: fixed;
+    border: 7px solid rgb(172, 59, 97);
+    border-radius: 0.375em;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+}
+  
+.popup {
+    background-color: #222825;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "chiudi             titolo"  
+    "trailer            sinossi"
+    "cast               sinossi";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 64px 0.9fr 100px;
+    padding: 20px;
+}
+  
+.popup h2 {
+    font-size: 2em;
+    font-weight: bold;
+    grid-area: titolo;
+    color: white;
+    line-height: 64px;
+    text-transform: uppercase;
+}
+  
+#sinossi{
+    grid-area: sinossi;
+    padding: 15px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.popup .table{
+    margin-top: 25px;
+}
+  
+.popup iframe {
+    width: 100%;
+    height: 75%;
+    grid-area: trailer;
+    border-radius: 0.375em;
+    margin-top: 30px;
+}
+
+.container-acquista-cast{
+    display: flex;
+    justify-content: space-around;
+    grid-area: cast;
+    width: 75%;
+    margin-top: 15px;
+}
+
+.container-acquista-cast #showCast{
+    width: 40%;
+    max-height: 60px;
+    border: 4px solid #ac3b61;
+    background-color: rgba(172, 59, 97, 0.4);
+    border-radius: 0.375em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.container-acquista-cast #acquista{
+    min-width: 40%;
+    max-height: 60px;
+    border: 4px solid #ac3b61;
+    background-color: rgba(172, 59, 97, 0.4);
+    border-radius: 0.375em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container-acquista-cast #acquista:hover{
+    background-color: #ac3b61;
+}
+
+.container-acquista-cast #showCast:hover{
+    background-color: #ac3b61;
+}
+
+.container-acquista-cast #acquista>a{
+    text-decoration: none;
+    color: white;
+}
+
+#contenitore-bottone-chiudi{
+    grid-area: chiudi;
+    width: 64px;
+    height: 100%;
+    margin-left: 0;
+}
+
+#chiudi{
+    margin: 0;
+    list-style: none;
+}
+
+#contenitore-bottone-chiudi #chiudi li{
+    background-image: url(../../../../img/chiudisprite.png);
+    width: 64px;
+    height: 64px;
+    background-position: 0;
+    cursor: pointer;
+}
+
+#contenitore-bottone-chiudi #chiudi:hover li{
+    background-position: -64px;
+}
+/*FINE POPUP DETTAGLI FILM*/
+
+
+
+
+
+
+
+/*INIZIO POPUP CAST*/
+#popup-cast{
+    position: fixed;
+    background-color: #222825;
+    border-radius: 0.375em;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.flexcontainer-cast{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    background-color: #222825;
+    max-width: 100%;
+    text-align: center
+}
+
+#popup-cast h2{
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.flexcontainer-cast .card{
+    border: 5px solid #ac3b61;
+    margin-top: 30px;
+    height: 85%;
+}
+
+.castmembers{
+    margin: 0 10px;
+}
+
+.flexcontainer-cast .card img{
+    border-radius: 0;
+    height: 85%;
+}
+
+.card-body{
+    padding: 10px;
+}
+
+.card-body .card-title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#popup-cast button{
+    width: 25%;
+    min-height: 60px;
+    margin-top: 5%;
+    border-radius: 0.375em;
+    border: 4px solid #ac3b61;
+    background-color: rgba(172, 59, 97, 0.4);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#popup-cast button:hover{
+    background-color: #ac3b61;
+}
+/*FINE POPUP CAST*/
+
+
+
+
+
+
+
+/*INIZIO POPUP RICERCA FILM*/
+.popupTrovaFilm{
+    position: fixed;
+    background-color: #222825;
+    border: 7px solid rgb(172, 59, 97);
+    border-radius: 0.375em;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.popupTrovaFilm h2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.flexcontainer-trovafilm{
+    display: flex;
+    height: 70%;
+    background-color: #222825;
+    max-width: 100%;
+    text-align: center
+}
+
+.flexcontainer-trovafilm .card{
+    border: 5px solid #ac3b61;
+    margin-top: 30px;
+    height: 85%;
+    cursor: pointer;
+}
+
+.filmTrovati{
+    margin: 0 10px;
+    flex: 1;
+}
+
+.flexcontainer-trovafilm .card img{
+    border-radius: 0;
+    height: 85%;
+}
+
+.default{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.popupTrovaFilm button{
+    min-width: 25%;
+    min-height: 60px;
+    margin: 5% auto;
+    display: block;
+    border-radius: 0.375em;
+    border: 4px solid #ac3b61;
+    background-color: rgba(172, 59, 97, 0.4);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.popupTrovaFilm button:hover{
+    background-color: #ac3b61;
+}
+/*FINE POPUP RICERCA FILM*/
+
+
+
+
+
+
+
+/*INIZIO SCROLL-INFINITO*/
+#caricaAltro{
+    min-width: 25%;
+    min-height: 60px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 0.375em;
+    border: 4px solid #ac3b61;
+    background-color: rgba(172, 59, 97, 0.4);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#caricaAltro:hover{
+    background-color: #ac3b61;
+}
+
+p{
+    color: white;
+}
+
+#arrow{
+    background-image: url(../../../../img/001-down-arrow.png);
+    background-position: 0;
+    background-size: 64px;
+    width: 64px;
+    height: 64px;
+    margin-top: 20px;
+}
+
+#button-message{
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #ac3b61;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+}
+
+.contenitore-titolo-scroll{
+    margin-top: 25px;
+}
+
+.contenitore-titolo-scroll h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+}
+/*Fine contenitore titolo*/
+
+/*Contenitore principale+frecce*/
+.contenitore-principale-scroll{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenitore-principale-scroll #freccia-sinistra-scroll,
+.contenitore-principale-scroll #freccia-destra-scroll{
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.contenitore-principale-scroll #freccia-sinistra-scroll:hover,
+.contenitore-principale-scroll #freccia-destra-scroll:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+}
+
+.contenitore-principale-scroll #freccia-sinistra-scroll{
+    left: 0;
+}
+
+.contenitore-principale-scroll #freccia-destra-scroll{
+    right: 0;
+}
+/*Fine contenitore principale+frecce*/
+
+/*Carosello*/
+.contenitore-carosello-scroll{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.contenitore-carosello-scroll .carosello-scroll{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 550px;
+    position: relative;
+}
+
+.contenitore-carosello-scroll .carosello-scroll .film-scroll{
+    min-width: 23%;
+    margin: 0 1%;
+    max-height: 550px;
+    transition: .3s ;
+}
+
+.contenitore-carosello-scroll .carosello-scroll .film-scroll:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.contenitore-carosello-scroll .carosello-scroll .film-scroll img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 12px;
+}
+
+.film-scroll-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.film-scroll:hover .film-scroll-info {
+    opacity: 1;
+}
+
+.film-scroll-info h3{
+    font-size: 1.3em;
+}
+
+.film-scroll-info p{
+    font-size: 1em;
+}
+/*Fine carosello*/
+/*FINE SCROLL-INFINITO*/
+
+
+
+
+
+
+
+/*MEDIAQUERY*/
+@media (max-width: 1400px){
+    .picsum-img-wrapper img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px){
+
+    .hero-banner .details p{
+        display: none;
+    }
+
+    .consigliati-contenitore .contenitore-carosello .carosello .film{
+        min-width: 48%;
+    }
+    
+    .contenitore-carosello-topRated .carosello-topRated .film-topRated{
+        min-width: 48%;
+    }
+
+    .contenitore-carosello-horror .carosello-horror .film-horror{
+        min-width: 48%;
+    }
+
+    .contenitore-carosello-commedia .carosello-commedia .film-commedia{
+        min-width: 48%;
+    }
+
+    .contenitore-carosello-animazione .carosello-animazione .film-animazione{
+        min-width: 48%;
+    }
+
+    .contenitore-carosello-scroll .carosello-scroll .film-scroll{
+        min-width: 48%;
+    }
+}
